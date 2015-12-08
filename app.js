@@ -2,14 +2,12 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const request = require('request');
-const path = require('path');
-const jwt = require('jsonwebtoken');
+const methodOverride = require('method-override');
 const app = express();
-
+// mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/giphy_db');
-
+mongoose.connect('mongodb://localhost:27017/beers_db');
+// check if mongoose is working
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
@@ -21,11 +19,11 @@ const routes = require('./config/routes');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use('/', express.static(__dirname + '/public'))
 app.use('/scripts', express.static(__dirname + '/node_modules'))
+app.use(methodOverride());
 app.use(routes);
-
-const server = app.listen(7000, () => {
+// server
+const server = app.listen(3000, () => {
   console.log('server running')
 });
