@@ -16,7 +16,7 @@
           <strong>{{beer.name}} | {{beer.abv}} | {{beer.note}}</strong> <button ng-click="beers.deleteBeer(beer)">pass</button>
         </li>
       </ul>
-      <form class="add-beer" ng-submit="beers.addBeer()">
+      <form class="add-beer" ng-submit='beers.addBeer()'>
           <div>
             <label for="new-beer-name">The Beer</label>
             <input type="text" id="new-beer-name" placeholder="Budweiser" ng-model="beers.newBeer.name">

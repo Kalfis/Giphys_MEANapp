@@ -1,5 +1,5 @@
 {
-  "name": "simon",
+  "name": "Todo",
   "version": "1.0.0",
   "description": "Todo in MEAN",
   "main": "app.js",
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.4.8",
+    "angular": "*",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "jsonwebtoken": "^5.4.1",
