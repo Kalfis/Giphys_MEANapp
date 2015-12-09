@@ -1,5 +1,5 @@
 'use strict';
-let Beer = require('../models/Beer')
+let Beer = require('../models/Beer');
 
 function getAll(request, response) {
   Beer.find(function(error, presidents) {
