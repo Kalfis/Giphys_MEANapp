@@ -44,6 +44,15 @@ function BeersController($http){
         self.newBeer = {};
     }
 
+    function fixBeer(beer) {
+      $http
+        .patch('http://localhost:3000/beers/' + beer._id)
+        .then(function(response) {
+          let index = self.all.indexOf(beer);
+          self.all.splice(index, 1)
+        });
+    }
+
     function deleteBeer(beer) {
       $http
         .delete('http://localhost:3000/beers/' + beer._id)
