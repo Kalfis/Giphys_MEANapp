@@ -6,12 +6,14 @@ let express = require('express'),
 
 let beersController = require('../controllers/beers');
 
+console.log(beersController)
 router.route('/beers')
   .get(beersController.getAll)
   .post(beersController.createBeer);
 
 router.route('/beers/:id')
+
   .patch(beersController.updateBeer)
   .delete(beersController.removeBeer);
 
-module.exports = router;
+module.exports = router

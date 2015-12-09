@@ -1,8 +1,8 @@
 'use strict';
+
 angular.module('beersToTry').controller('BeersController',
 // BeersController);
  [ '$http', function($http){
-  console.log('in beers function');
 
     let self = this;
 

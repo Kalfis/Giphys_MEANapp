@@ -1,8 +1,8 @@
 'use strict';
-let Beer = require('../models/Beer');
+var Beer = require('../models/Beer');
 
 function getAll(request, response) {
-  Beer.find(function(error, presidents) {
+  Beer.find(function(error, beers) {
     if(error) response.json({message: 'No beer here'});
 
     response.json({beers: beers})
