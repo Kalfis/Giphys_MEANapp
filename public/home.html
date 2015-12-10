@@ -3,7 +3,7 @@
   <ul id="beers">
     <li ng-repeat="beer in beers.all">
       <span class="done-{{beer.done}}">
-        <input type="checkbox" ng-model="beer.done"><strong>{{beer.name}} | {{beer.abv}}% ABV | {{beer.note}}</strong> <button ng-click="beers.deleteBeer(beer)">pass</button> <button ng-click="beers.fixBeer(beer)">edit</button>
+        <input type="checkbox" ng-model="beer.done"><strong>{{beer.name}} | {{beer.abv}}% ABV | {{beer.note}}</strong> <button ng-click="beers.deleteBeer(beer)">pass</button> <button ng-attr-id="{{beer._id}}" ng-click="beers.fixBeer(beer)" ui-sref="edit">edit</button>
       </span>
     </li>
   </ul>

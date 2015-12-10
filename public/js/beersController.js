@@ -17,6 +17,7 @@ function BeersController($http){
     self.all = [];
     self.addBeer = addBeer;
     self.newBeer = {};
+    self.fixBeer = fixBeer;
     self.getBeers = getBeers;
     self.deleteBeer = deleteBeer;
 

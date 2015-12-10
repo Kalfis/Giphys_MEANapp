@@ -1,0 +1,27 @@
+<section ng-controller="BeersController as beers" ui-view>
+  <h1>Fix a Beer</h1>
+
+    <li ng-show="{{beer}}">
+        <strong>{{beer.name}} | {{beer.abv}}% ABV | {{beer.note}}</strong>
+    </li>
+
+  <form class="edit-beer" ng-submit='beers.fixBeer(beer)'>
+      <div>
+        <label for="edit-beer-name">The Beer</label>
+        <input type="text" id="edit-beer-name" placeholder="Budweiser" ng-model="beers.Beer.name">
+      </div>
+
+      <div>
+        <label for="edit-beer-abv">ABV%</label>
+        <input type="Number" id="edit-beer-abv" placeholder="5.0%" ng-model="beers.Beer.abv">
+      </div>
+
+      <div>
+        <label for="edit-beer-note">Notes</label>
+        <input type="text" id="edit-beer-note" placeholder="King of Beers" ng-model="beers.Beer.note">
+      </div>
+
+      <div>
+        <input type="submit" value="Fix Beer" class="button">
+      </div>
+  </form>
